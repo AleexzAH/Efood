@@ -1,11 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import { GlobalStyle } from './styles.ts'
+import ReactDOM from 'react-dom/client'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <GlobalStyle />
-    <App />
-  </StrictMode>,
+import { BrowserRouter } from 'react-router-dom'
+
+import { CartProvider } from './contexts/CartContexts'
+
+import App from './App'
+import { GlobalStyle } from './styles'
+
+ReactDOM.createRoot(
+  document.getElementById('root')!
+).render(
+  <BrowserRouter>
+  <GlobalStyle />
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </BrowserRouter>
 )

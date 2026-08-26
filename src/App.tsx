@@ -1,15 +1,12 @@
-import { BrowserRouter } from 'react-router-dom'
-
 import { Container } from './styles'
 import Rotas from './routes'
+import Cart from './components/Cart'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Container>
-        <Rotas />
-      </Container>
-    </BrowserRouter>
+    <><Container>
+      <Rotas />
+    </Container><Cart /></>
   )
 }
 

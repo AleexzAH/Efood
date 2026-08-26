@@ -1,15 +1,21 @@
 import type { RestaurantProps } from '../../../../types'
+import { Categories, CapaHero, CategoriesDiv, Title } from './styles'
 
-interface RestaurantInfoProps {
+export interface RestaurantInfoProps {
   restaurant: RestaurantProps
 }
 
 const Hero = ({ restaurant }: RestaurantInfoProps) => {
   return (
     <div>
-      <img src={restaurant.image} />
-      <label>{restaurant.categories}</label>
-      <h2>{restaurant.title}</h2>
+      <CapaHero $image={restaurant.image}>
+        <CategoriesDiv>
+          {restaurant.categories.map((category) => (
+            <Categories key={category}>{category}</Categories>
+          ))}
+        </CategoriesDiv>
+        <Title>{restaurant.title}</Title>
+      </CapaHero>
     </div>
   )
 }

@@ -3,19 +3,23 @@ import { getRestaurantById } from '../../data/index'
 
 import HeaderPerfil from './components/HeaderPerfil'
 import Hero from './components/Hero'
+import ProductList from './components/ProductList'
+import Footer from '../../components/Footer'
 
 const Perfil = () => {
   const { id } = useParams()
   const restaurant = getRestaurantById(Number(id))
 
-  if(!restaurant) {
+  if (!restaurant) {
     return <h1>Restaurante não encontrado</h1>
   }
-  
+
   return (
     <>
       <HeaderPerfil />
       <Hero restaurant={restaurant} />
+      <ProductList />
+      <Footer />
     </>
   )
 }

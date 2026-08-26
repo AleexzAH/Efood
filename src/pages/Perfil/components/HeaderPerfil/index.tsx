@@ -1,12 +1,18 @@
 import Logo from '../../../../components/Logo'
-import { Container, LinkMenu, TextCompras } from './styles'
+import { useCart } from '../../../../contexts/CartContexts'
+import { Container, Header, LinkMenu, TextCompras } from './styles'
+
 
 const HeaderPerfil = () => {
+  const { cartQuantity, openCart } = useCart()
+
   return (
     <Container>
-      <LinkMenu href="">Restaurantes</LinkMenu>
-      <Logo />
-      <TextCompras>0 produtos adicionados</TextCompras>
+      <Header>
+        <LinkMenu to={'/'}>Restaurantes</LinkMenu>
+        <Logo />
+        <TextCompras onClick={openCart}>{cartQuantity} produto(s) no carrinho</TextCompras>
+      </Header>
     </Container>
   )
 }
