@@ -4,7 +4,8 @@ import { theme } from '../../../../styles'
 
 export const Card = styled.div`
   position: relative;
-  width: 500px;
+  width: 470px;
+  height: 390px;
   align-content: center;
 `
 export const ImageContainer = styled.div`
@@ -14,7 +15,7 @@ export const ImageContainer = styled.div`
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
     z-index: 1;
     max-height: 220px;
   }

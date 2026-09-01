@@ -8,14 +8,15 @@ export const Container = styled.div`
   height: 200px;
   background-image: url(${Fundo});
   align-items: center;
+  border: 1px solid red;
 `
 export const Header = styled.div`
   width: 80%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  gap: 20px;
 `
 export const LinkMenu = styled(Link)`
   text-decoration: none;

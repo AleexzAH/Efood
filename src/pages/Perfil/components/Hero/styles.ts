@@ -14,7 +14,7 @@ export const CapaHero = styled.div<{ $image: string }>`
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
     max-height: 280px;
   }
@@ -22,8 +22,8 @@ export const CapaHero = styled.div<{ $image: string }>`
 export const CategoriesDiv = styled.div`
   position: absolute;
   background-color: transparent;
-  top: 10px;
-  left: 100px;
+  top: 16px;
+  left: 230px;
   display: flex;
   column-gap: 20px;
 `
@@ -38,7 +38,7 @@ export const Title = styled.h2`
   color: #ffffff;
   font-size: 32px;
   font-weight: 900;
-  left: 100px;
-  bottom: 10px;
+  left: 230px;
+  bottom: 16px;
   z-index: 2;
 `
