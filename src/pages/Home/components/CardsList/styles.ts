@@ -7,5 +7,4 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   gap: 40px;
-  border: 1px solid red;
 `
