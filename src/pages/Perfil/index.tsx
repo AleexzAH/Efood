@@ -5,6 +5,7 @@ import HeaderPerfil from './components/HeaderPerfil'
 import Hero from './components/Hero'
 import ProductList from './components/ProductList'
 import Footer from '../../components/Footer'
+import { Container } from '../../styles'
 
 const Perfil = () => {
   const { id } = useParams()
@@ -16,9 +17,11 @@ const Perfil = () => {
 
   return (
     <>
+    <Container>
       <HeaderPerfil />
       <Hero restaurant={restaurant} />
       <ProductList />
+    </Container>
       <Footer />
     </>
   )

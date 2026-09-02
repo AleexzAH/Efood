@@ -1,12 +1,10 @@
-import { Container } from './styles'
 import Rotas from './routes'
 import Cart from './components/Cart'
 
 function App() {
-  return (
-    <><Container>
+  return (<>
       <Rotas />
-    </Container><Cart /></>
+    <Cart /></>
   )
 }
 

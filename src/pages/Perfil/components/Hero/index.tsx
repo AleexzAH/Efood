@@ -1,5 +1,5 @@
 import type { RestaurantProps } from '../../../../types'
-import { Categories, CapaHero, CategoriesDiv, Title } from './styles'
+import { Categories, CapaHero, CategoriesDiv, Title, CapHeroWrapper, HeroInfos } from './styles'
 
 export interface RestaurantInfoProps {
   restaurant: RestaurantProps
@@ -8,14 +8,17 @@ export interface RestaurantInfoProps {
 const Hero = ({ restaurant }: RestaurantInfoProps) => {
   return (
     <div>
-      <CapaHero $image={restaurant.image}>
-        <CategoriesDiv>
-          {restaurant.categories.map((category) => (
-            <Categories key={category}>{category}</Categories>
-          ))}
-        </CategoriesDiv>
-        <Title>{restaurant.title}</Title>
-      </CapaHero>
+      <CapHeroWrapper>
+        <CapaHero $image={restaurant.image} />
+        <HeroInfos>
+          <CategoriesDiv>
+            {restaurant.categories.map((category) => (
+              <Categories key={category}>{category}</Categories>
+            ))}
+          </CategoriesDiv>
+          <Title>{restaurant.title}</Title>
+        </HeroInfos>
+      </CapHeroWrapper>
     </div>
   )
 }
